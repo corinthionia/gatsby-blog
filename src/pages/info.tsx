@@ -13,22 +13,6 @@ interface IInfoPageProps {
   }
 }
 
-/* practicing emotion library */
-
-// styled component (kebab-case)
-const Text1 = styled.div<{ disable: boolean }>`
-  font-size: 20px;
-  font-weight: 700;
-  text-decoration: ${({ disable }) => (disable ? 'line-through' : 'none')};
-`
-
-// object (camelCase)
-const Text2 = styled('div')<{ disable: boolean }>(({ disable }) => ({
-  fontSize: '15px',
-  color: 'blue',
-  textDecoration: disable ? 'line-through' : 'none',
-}))
-
 const InfoPage: FunctionComponent<IInfoPageProps> = ({
   data: {
     site: {
@@ -46,8 +30,6 @@ const InfoPage: FunctionComponent<IInfoPageProps> = ({
   )
 }
 
-export default InfoPage
-
 export const metadataQuery = graphql`
   {
     site {
@@ -59,3 +41,21 @@ export const metadataQuery = graphql`
     }
   }
 `
+
+/* practicing emotion library */
+
+// styled component (kebab-case)
+const Text1 = styled.div<{ disable: boolean }>`
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: ${({ disable }) => (disable ? 'line-through' : 'none')};
+`
+
+// object (camelCase)
+const Text2 = styled('div')<{ disable: boolean }>(({ disable }) => ({
+  fontSize: '15px',
+  color: 'blue',
+  textDecoration: disable ? 'line-through' : 'none',
+}))
+
+export default InfoPage

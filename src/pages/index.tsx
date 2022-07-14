@@ -3,13 +3,6 @@ import styled from '@emotion/styled'
 import GlobalStyle from 'components/common/GlobalStyle'
 import Introduction from 'components/main/Introduction'
 
-const Wrapper = styled.div`
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-`
-
 const Index: FunctionComponent = () => {
   return (
     <Wrapper>
@@ -18,5 +11,12 @@ const Index: FunctionComponent = () => {
     </Wrapper>
   )
 }
+
+const Wrapper = styled.div`
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+`
 
 export default Index

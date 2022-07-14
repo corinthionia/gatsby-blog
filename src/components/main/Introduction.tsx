@@ -2,6 +2,21 @@ import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import ProfileImage from './ProfileImage'
 
+const Introduction: FunctionComponent = () => {
+  return (
+    <Background>
+      <Wrapper>
+        <ProfileImage />
+
+        <div>
+          <SubTitle>테스트테스트 </SubTitle>
+          <Title>테스트입니다</Title>
+        </div>
+      </Wrapper>
+    </Background>
+  )
+}
+
 const Background = styled.div`
   width: 100%;
   background-image: linear-gradient(60deg, #ffc1cc 0%, #bbe3bf 100%);
@@ -29,20 +44,5 @@ const Title = styled.div`
   font-size: 16px;
   font-weight: 700;
 `
-
-const Introduction: FunctionComponent = () => {
-  return (
-    <Background>
-      <Wrapper>
-        <ProfileImage />
-
-        <div>
-          <SubTitle>테스트테스트 </SubTitle>
-          <Title>테스트입니다</Title>
-        </div>
-      </Wrapper>
-    </Background>
-  )
-}
 
 export default Introduction
