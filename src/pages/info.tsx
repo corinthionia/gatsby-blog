@@ -1,9 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { graphql } from 'gatsby'
-import Text from 'components/Text'
-import { Link } from 'gatsby'
 
-type InfoPageProps = {
+interface IInfoPageProps {
   data: {
     site: {
       siteMetadata: {
@@ -15,7 +13,7 @@ type InfoPageProps = {
   }
 }
 
-const InfoPage: FunctionComponent<InfoPageProps> = function ({
+const InfoPage: FunctionComponent<IInfoPageProps> = function ({
   data: {
     site: {
       siteMetadata: { title, description, author },
@@ -24,10 +22,7 @@ const InfoPage: FunctionComponent<InfoPageProps> = function ({
 }) {
   return (
     <div>
-      <Text text={title} />
-      <Text text={description} />
-      <Text text={author} />
-      <Link to="/">Go to main page</Link>
+      {title} {description} {author}
     </div>
   )
 }
