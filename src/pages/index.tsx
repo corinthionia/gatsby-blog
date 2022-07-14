@@ -1,11 +1,21 @@
 import React, { FunctionComponent } from 'react'
-import { Link } from 'gatsby'
+import styled from '@emotion/styled'
+import GlobalStyle from 'components/common/GlobalStyle'
+import Introduction from 'components/main/Introduction'
 
-const Index: FunctionComponent = function () {
+const Wrapper = styled.div`
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+`
+
+const Index: FunctionComponent = () => {
   return (
-    <div>
-      <Link to="/info/">Go to info page</Link>
-    </div>
+    <Wrapper>
+      <GlobalStyle />
+      <Introduction />
+    </Wrapper>
   )
 }
 
