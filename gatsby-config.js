@@ -1,18 +1,25 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Corinthionia`,
+    description: `corinthionia(Joohyun Kim)`,
+    author: `@corinthionia`,
+    siteUrl: `https://corinthionia.github.io/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true,
+        allExtensions: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `contents`,
+        path: `${__dirname}/contents`,
       },
     },
     `gatsby-transformer-sharp`,
